@@ -28,15 +28,15 @@ const Coin = ({ filter }) => {
                 <td className="uppercase text-white/30">{item.symbol}</td>
                 <td className="text-white/30">USD {item.current_price}</td>
                 <td className="text-white/30">
-                  USD {item.market_cap_change_24h.toLocaleString()}
+                  USD {item.market_cap_change_24h?.toLocaleString()}
                 </td>
                 {item.price_change_percentage_24h < 0 ? (
                   <td className="text-red-600">
-                    {item.price_change_percentage_24h.toFixed(2)} %
+                    {item.price_change_percentage_24h?.toFixed(2)} %
                   </td>
                 ) : (
                   <td className="text-green-600">
-                    {item.price_change_percentage_24h.toFixed(2)} %
+                    {item.price_change_percentage_24h?.toFixed(2)} %
                   </td>
                 )}
               </tr>
